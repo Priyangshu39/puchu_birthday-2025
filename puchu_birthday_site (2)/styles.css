@@ -1,0 +1,58 @@
+:root{
+  --bg: #fff6f9;
+  --panel: #ffffff;
+  --accent: #ffb6d2;
+  --muted: #6b6b6b;
+  --pink: #ffd6e8;
+  --primary: #ff8fb8;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family: 'Segoe UI', Roboto, Arial, sans-serif;background: linear-gradient(180deg,var(--bg),#fff);color:#222;-webkit-font-smoothing:antialiased;}
+.page{max-width:980px;margin:30px auto;padding:24px;}
+.scene{display:none}
+.page-visible{display:block}
+.center-card{background:var(--panel);padding:22px;border-radius:16px;box-shadow:0 10px 28px rgba(0,0,0,0.06);text-align:center}
+.title{margin:0;font-family: 'Dancing Script', cursive;font-size:34px;color:#222;}
+.subtitle{color:var(--muted);margin-top:8px; font-size:15px}
+.controls{margin-top:18px;display:flex;gap:12px;justify-content:center;align-items:center}
+
+.btn{border-radius:10px;padding:10px 14px;border:none;background:#fff;border:1px solid #eee;cursor:pointer;font-size:14px}
+.btn.primary{background:var(--primary);color:white;border:none;box-shadow:0 6px 18px rgba(255,140,170,0.12)}
+
+.candles{display:flex;gap:12px;justify-content:center;margin:18px 0 6px}
+.candle{width:18px;height:80px;position:relative;display:flex;flex-direction:column;align-items:center}
+.stick{width:14px;height:48px;background:#fbe9ef;border-radius:6px;box-shadow:inset 0 -6px 10px rgba(0,0,0,0.02);margin-top:12px}
+.flame{width:8px;height:16px;background: radial-gradient(circle at 30% 30%, #fff6b3 0,#ffd05a 30%, #ff6b6b 70%);border-radius:50% 50% 50% 50%;position:absolute;top:-6px;box-shadow:0 6px 14px rgba(255,120,160,0.25), 0 0 18px rgba(255,200,220,0.18);animation:flame 900ms infinite}
+@keyframes flame{0%{transform:translateY(0) scale(1)}50%{transform:translateY(-4px) scale(1.06)}100%{transform:translateY(0) scale(1)}}
+
+/* extinguished state */
+.candle.out .flame{opacity:0;transform:scale(0.6);transition:opacity .6s, transform .6s;box-shadow:none}
+
+/* cake area */
+.cake-area{display:flex;justify-content:center;margin:18px 0}
+.cake{width:280px;height:180px;position:relative;cursor:pointer}
+.cake-top{position:absolute;top:8px;left:14%;right:14%;height:60px;background:linear-gradient(180deg,#fff2f6,#ffd6e8);border-radius:40px 40px 18px 18px;box-shadow:0 8px 18px rgba(0,0,0,0.06)}
+.cake-body{position:absolute;bottom:18px;left:6%;right:6%;height:90px;background:linear-gradient(180deg,#ffd6e8,#ffb6d2);border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+.cake-plate{position:absolute;bottom:4px;left:0;right:0;height:24px;background:#fff;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,0.05)}
+
+/* cake cut animation - we simulate a slice by showing a pseudo-element */
+.cake.cutting::after{content:'';position:absolute;left:48%;top:18%;width:60px;height:110px;background:linear-gradient(90deg, rgba(255,255,255,0.0), rgba(255,255,255,0.6));transform:rotate(30deg);opacity:0.9;transition:transform .7s ease;}
+
+/* gallery */
+.gallery .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+
+/* message card */
+.message-card{margin-top:18px;padding:12px;text-align:left}
+.card h2{font-family: 'Dancing Script', cursive;color:#b83b7a;font-size:22px;margin:0 0 8px}
+.wish{color:#333;line-height:1.6;font-size:15px}
+
+/* footer */
+.footer{text-align:center;margin-top:18px;color:var(--muted);font-size:14px}
+
+/* responsive */
+@media(max-width:800px){
+  .gallery .grid{grid-template-columns:repeat(2,1fr)}
+  .candles{gap:8px}
+  .cake{width:220px;height:150px}
+}
