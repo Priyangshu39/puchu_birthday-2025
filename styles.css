@@ -1,0 +1,50 @@
+
+:root{
+  --bg: #fff6f9;
+  --panel: #ffffff;
+  --accent: #ffb6d2;
+  --muted: #6b6b6b;
+  --pink: #ffd6e8;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg,var(--bg),#fff);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:980px;margin:30px auto;padding:24px;}
+.hero{display:flex;gap:20px;align-items:center;background:var(--panel);padding:18px;border-radius:18px;box-shadow:0 6px 18px rgba(0,0,0,0.06);}
+.hero-left{flex:1;padding:6px 12px}
+.title{margin:0;font-family: 'Dancing Script', cursive;font-size:34px;color:#222;}
+.name{color:#d83e8a;}
+.subtitle{color:var(--muted);margin-top:8px; font-size:15px}
+.teddy-row{margin-top:12px;font-size:24px}
+.hero-right{width:300px;display:flex;justify-content:center;align-items:center}
+.big-photo{position:relative;border-radius:14px;overflow:hidden;width:260px;height:340px;box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+.big-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.cake-emoji{position:absolute;right:10px;bottom:10px;font-size:30px;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15));transform:translateY(0);transition:transform .2s}
+.big-photo:hover .cake-emoji{transform:translateY(-6px)}
+
+.content{margin-top:20px}
+.collage .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.collage img{width:100%;height:220px;object-fit:cover;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.06)}
+
+.message{margin-top:20px;display:flex;justify-content:center}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,245,250,0.95));padding:18px;border-radius:14px;max-width:780px;box-shadow:0 10px 30px rgba(0,0,0,0.04)}
+.card h2{margin:0 0 8px 0;font-family: 'Dancing Script', cursive;color:#b83b7a;font-size:24px}
+.wish{color:#333;line-height:1.6;font-size:16px}
+.controls{margin-top:12px;display:flex;align-items:center;gap:12px}
+#playBtn{background:var(--accent);border:none;padding:10px 14px;border-radius:10px;cursor:pointer;font-size:14px}
+.hint{color:var(--muted);font-size:12px}
+
+.footer{text-align:center;margin-top:18px;color:var(--muted);font-size:14px}
+.heart{color:#ff6ea6}
+@media(max-width:800px){
+  .hero{flex-direction:column}
+  .hero-right{width:100%}
+  .big-photo{width:92%;height:320px}
+  .collage img{height:160px}
+  .page{padding:12px;margin:12px}
+}
