@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Happy Birthday Puchu</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page" id="pageWrap">
+
+  <!-- PAGE 1: Candles -->
+  <section class="scene page-visible" id="page1">
+    <div class="center-card">
+      <h1 class="title">Make a wish, Puchu 🕯️</h1>
+      <p class="subtitle">Blow the candles to begin your surprise.</p>
+
+      <div class="candles" id="candles">
+        <div class="candle"><div class="flame"></div><div class="stick"></div></div>
+        <div class="candle"><div class="flame"></div><div class="stick"></div></div>
+        <div class="candle"><div class="flame"></div><div class="stick"></div></div>
+        <div class="candle"><div class="flame"></div><div class="stick"></div></div>
+        <div class="candle"><div class="flame"></div><div class="stick"></div></div>
+      </div>
+
+      <div class="controls">
+        <button id="blowBtn" class="btn primary">Blow 🎐</button>
+        <button id="nextFromCandles" class="btn" style="display:none">Next ➜</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 2: Cake -->
+  <section class="scene" id="page2">
+    <div class="center-card">
+      <h1 class="title">Cake time 🎂</h1>
+      <p class="subtitle">Cut the cake to play the birthday song.</p>
+
+      <div class="cake-area">
+        <div class="cake" id="cake" aria-hidden="false">
+          <div class="cake-top"></div>
+          <div class="cake-body"></div>
+          <div class="cake-plate"></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="cutBtn" class="btn primary">Cut Cake ✂️</button>
+        <button id="revealPicsBtn" class="btn" style="display:none">Click me, Puchu ✨</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 3: Photos & Wish (upgraded collage) -->
+  <section class="scene" id="page3">
+    <div class="center-card">
+      <h1 class="title">Happy Birthday, Puchu 🤍</h1>
+      <p class="subtitle">A little collection of your moments.</p>
+
+      <div class="collage-upgrade">
+        <div class="top-row">
+          <div class="photo large"><img src="WhatsApp Image 2025-11-30 at 21.55.04_31d1bc5a.jpg" alt="p1"></div>
+          <div class="photo large"><img src="WhatsApp Image 2025-11-30 at 21.55.04_57ccab4b.jpg" alt="p2"></div>
+        </div>
+
+        <div class="middle-row">
+          <div class="quote-box">
+            <p class="quote">"A best friend who feels more like a habit I can’t live without. — <strong>Puchu</strong> 🤍"</p>
+          </div>
+          <div class="photo tall"><img src="WhatsApp Image 2025-11-30 at 21.55.04_c925e7cf.jpg" alt="p3"></div>
+        </div>
+
+        <div class="bottom-row">
+          <div class="photo small polaroid"><img src="WhatsApp Image 2025-11-30 at 21.55.04_f9222929.jpg" alt="p4"></div>
+          <div class="photo small polaroid"><img src="WhatsApp Image 2025-11-30 at 21.55.05_7dfa5906.jpg" alt="p5"></div>
+          <div class="photo small polaroid"><img src="WhatsApp Image 2025-11-30 at 21.55.05_ac297ca9.jpg" alt="p6"></div>
+          <div class="photo small polaroid"><img src="WhatsApp Image 2025-11-30 at 21.55.06_65ec55e4.jpg" alt="p7"></div>
+        </div>
+      </div>
+
+      <div class="card message-card">
+        <h2>From the heart — a wish</h2>
+        <p class="wish">Today I wish I could gather every small smile you’ve given me, every silly laugh and quiet moment, and keep them safe just for you. Even when miles come between us, your presence feels like home — warm, steady, and somehow the most honest place I know. Thank you for being the one who understands without many words, who turns little days into memories, and who makes life softer just by being in it. May this year bring you calm mornings, brave dreams, and the kind of joy that stays.<br><br><strong>— Priyangshu</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">Made with 🤍 and teddies 🧸</footer>
+</div>
+
+<!-- Audio placeholders -->
+<audio id="bdaySong" loop preload="auto"></audio>
+<audio id="blowSound" preload="auto"></audio>
+<audio id="cakeCutSound" preload="auto"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
